@@ -1,0 +1,53 @@
+Preview
+Test Output
+
+Compiler output:
+
+> flexbox_blog_card@1.0.0 test-compile /task
+> jest -i compile.test.js
+
+Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating
+FAIL ./compile.test.js
+  test
+    ? compile (7 ms)
+
+  ? test ? compile
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+       6 |         const html = fs.readFileSync("/task/solution.html");
+       7 |         const hasMediaQuery = /@media/.test(html.toString());
+    >  8 |         expect(hasMediaQuery).toBe(false);
+         |                               ^
+       9 |         const combinedSolution = `<html lang="en">
+      10 | <head>
+      11 |     <meta charset="UTF-8" />
+
+      at Object.<anonymous> (compile.test.js:8:31)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        2.381 s
+Ran all test suites matching /compile.test.js/i.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! flexbox_blog_card@1.0.0 test-compile: `jest -i compile.test.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the flexbox_blog_card@1.0.0 test-compile script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2022-02-10T15_11_30_491Z-debug.log
+
+Exit code: 1
+
+Detected some errors.
